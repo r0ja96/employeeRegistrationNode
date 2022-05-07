@@ -15,6 +15,6 @@ app.use(express.json());
 
 app.use('/', accountRoute,employeeRoute,jobTitleRoute,departmentRoute,chartRoute,reportRoute);
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`)
+app.listen(process.env.PORT || port, () => {
+  console.log(`App listening at http://localhost:${process.env.PORT || port}`)
 });
