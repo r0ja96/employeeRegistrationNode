@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 
 const con = mysql.createPool({
-        host:'localhost',
-        user:'admin',
-        password: 'admin',
+        host:'173.230.148.27',
+        user:'root',
+        password: 'password',
         database: 'employeeRegistration'
 });
 
