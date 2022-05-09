@@ -22,7 +22,7 @@ Chart.info = ({email,password,department}, result) => {
           return;
         }
       if(data){
-        const sql = `SELECT gender, count(*) as amount  FROM employee where department = "${department}" group by gender;`;
+        const sql = `SELECT gender, count(*) as amount  FROM employee where department = "${department}" and email = "${email}" group by gender;`;
       
         db.getConnection(function(err, connection) {
          if (err){ 
